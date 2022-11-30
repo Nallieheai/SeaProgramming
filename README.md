@@ -1,2 +1,3 @@
 # SeaProgramming
-The Complete C Programming Bootcamp
+The Complete C Programming Bootcamp by Byte Garage
+ 
