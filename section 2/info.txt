@@ -1,1 +1,3 @@
 https://winlibs.com/#download-release
+
+Keyboard shortcuts for Visual Studio Code: Help -> Keyboard Shortcuts Reference
