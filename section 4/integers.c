@@ -4,6 +4,8 @@
 
 int main()
 {
+    // int8_t & uint8_t are from stdint.h, these are integers that are specified in size. 
+    // (integers may vary in size depending on the system)
     int8_t number1 = INT8_MAX;
     uint8_t number2 = UINT8_MAX;
 
