@@ -31,6 +31,7 @@ void calculator_int()
     c = a % b;
     printf("C = A %% B -> %d\n", c);
     
+    printf("\n");
 }
 
 void calculator_float()
@@ -63,12 +64,61 @@ void calculator_float()
     c = (int) a % (int) b;
     printf("C = A %% B -> %f\n", c);
     
+    printf("\n");
+}
+
+void unary_operators_float()
+{
+    float a, b;
+
+    // Post-increment
+    a = 3.14;
+    b = a++;
+
+    printf("After post-increment:\n");
+    printf("a: %.2f\n", a);
+    printf("b: %.2f\n", b);
+
+    // Pre-increment
+    a = 3.14;
+    b = ++a;
+
+    printf("After pre-increment:\n");
+    printf("a: %.2f\n", a);
+    printf("b: %.2f\n", b);
+
+    printf("\n");
+}
+
+void unary_operators_int()
+{
+    int a, b;
+
+    // Post-increment
+    a = 0;
+    b = a++ * 2 + 1;
+
+    printf("After post-increment:\n");
+    printf("a: %d\n", a);
+    printf("b: %d\n", b);
+
+    // Pre-increment
+    a = 0;
+    b = ++a * 2 + 1;
+
+    printf("After pre-increment:\n");
+    printf("a: %d\n", a);
+    printf("b: %d\n", b);
+
+    printf("\n");
 }
 
 int main()
 {
     // calculator_int();
-    calculator_float();
+    // calculator_float();
+    unary_operators_float();
+    unary_operators_int();
 
     return 0;
 }
