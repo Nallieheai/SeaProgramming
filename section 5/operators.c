@@ -110,7 +110,6 @@ void relational_operators()
     printf("\n");
 }
 
-
 void unary_operators_int()
 {
     int a, b;
@@ -134,13 +133,24 @@ void unary_operators_int()
     printf("\n");
 }
 
+void logical_operators()
+{
+    // OPERATOR + BOOLEAN ALGEBRA + BOOLEAN SYMBOL
+    // &&       | AND             | ⋀
+    // ||       | OR              | ∨
+    // !        | NOT             | ¬
+
+    return;
+}
+
 int main()
 {
     // calculator_int();
     // calculator_float();
     // unary_operators_float();
     // unary_operators_int();
-    relational_operators();
+    // relational_operators();
+    // logical_operators();
 
     return 0;
 }
