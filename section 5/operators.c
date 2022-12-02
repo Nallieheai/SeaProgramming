@@ -90,6 +90,27 @@ void unary_operators_float()
     printf("\n");
 }
 
+void relational_operators()
+{
+    char a = 'a';
+    char b = 'b';
+
+    printf("A (char): %c\n", a);
+    printf("B (char): %c\n", b);
+
+    printf("\n");
+
+    printf("A == B -> %d\n", a == b);
+    printf("A != B -> %d\n", a != b);
+    printf("A > B -> %d\n", a > b);
+    printf("A < B -> %d\n", a < b);
+    printf("A >= B -> %d\n", a >= b);
+    printf("A <= B -> %d\n", a <= b);
+
+    printf("\n");
+}
+
+
 void unary_operators_int()
 {
     int a, b;
@@ -117,8 +138,9 @@ int main()
 {
     // calculator_int();
     // calculator_float();
-    unary_operators_float();
-    unary_operators_int();
+    // unary_operators_float();
+    // unary_operators_int();
+    relational_operators();
 
     return 0;
 }
