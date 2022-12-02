@@ -175,7 +175,7 @@ void bitwise_operators()
     uint8_t a = 12;
     uint8_t b = 5;
 
-    printf("A = %u (%b)\n", a);
+    printf("A = %u\n", a);
     printf("B = %u\n", b);
     printf("\n");
 
