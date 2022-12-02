@@ -187,6 +187,18 @@ void bitwise_operators()
     printf("A >> 1 = %u\n", a >> 1U);
 }
 
+void bitmasks() 
+{
+    /*
+        & -> Bit Clearing   -> Mask is 0 -> result is 0
+        & -> Bit Testing    -> Mask is 1 -> input pass
+        | -> Bit Setting    -> Mask is 1 -> Result is 1
+        ^ -> Bit Toggling   -> Mask is 1 -> Input toggle
+    */
+
+   return;
+}
+
 int main()
 {
     // calculator_int();
@@ -195,7 +207,7 @@ int main()
     // unary_operators_int();
     // relational_operators();
     // logical_operators();
-    bitwise_operators();
+    // bitwise_operators();
 
     return 0;
 }
