@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 void calculator_int()
 {
@@ -143,6 +144,49 @@ void logical_operators()
     return;
 }
 
+void bitwise_operators()
+{
+    // A << N -> A * 2^N
+    // 1 << 0 -> 1 (A)
+    // 1 << 1 -> 2 (A * 2)
+    // 1 << 2 -> 4 (A * 2 * 2)
+    // 1 << 3 -> 8 (A * 2 * 2 * 2)
+
+    // A >> N -> A / 2^N
+    // 1 >> 0 -> 1 (A)
+    // 1 >> 1 -> 2 (A / 2)
+    // 1 >> 2 -> 4 (A / 2 / 2)
+    // 1 >> 3 -> 8 (A / 2 / 2 / 2)
+
+    /**
+     * type: uint8_t
+     * 
+     * A = 12 ---> 0000 1100
+     * B =  5 ---> 0000 0101
+     * 
+     * A & B  ---> 0000 0100 = 4
+     * A | B  ---> 0000 1101 = 13
+     * A ^ B  ---> 0000 1001 = 9
+     * A << 1 ---> 0001 1000 = 24
+     * A >> 1 ---> 0000 0110 = 6
+     *  
+     */
+
+    uint8_t a = 12;
+    uint8_t b = 5;
+
+    printf("A = %u (%b)\n", a);
+    printf("B = %u\n", b);
+    printf("\n");
+
+    printf("A & B  = %u\n", a & b);
+    printf("A | B  = %u\n", a | b);
+    printf("A ^ B  = %u\n", a ^ b);
+
+    printf("A << 1 = %u\n", a << 1U);
+    printf("A >> 1 = %u\n", a >> 1U);
+}
+
 int main()
 {
     // calculator_int();
@@ -151,6 +195,7 @@ int main()
     // unary_operators_int();
     // relational_operators();
     // logical_operators();
+    bitwise_operators();
 
     return 0;
 }
