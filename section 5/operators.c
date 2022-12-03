@@ -236,6 +236,19 @@ void sizeof_operator()
     printf("%llu\n", sizeof(float));
 }
 
+void casting_and_conversions()
+{
+    // Integer Promotion
+    char a = 0xFF; // -1
+    unsigned char b = 0xFF; // 255
+    int c = 0xFF;
+    // This means they are not the same, so when checking if a == b they will be casted to Integer, and have different values.
+    printf("Values (a & b): %d & %d, a == b (%d)\n", a, b, a == b);
+    printf("Values (b & c): %d & %d, b == c (%d)\n", b, c, b == c);
+
+    return;
+}
+
 int main()
 {
     // calculator_int();
@@ -246,7 +259,8 @@ int main()
     // logical_operators();
     // bitwise_operators();
     // bit_manipulation();
-    sizeof_operator();
+    // sizeof_operator();
+    casting_and_conversions();
 
     return 0;
 }
