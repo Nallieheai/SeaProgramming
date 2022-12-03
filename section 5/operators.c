@@ -199,6 +199,29 @@ void bitmasks()
    return;
 }
 
+void bit_manipulation()
+{   
+    // 170
+    int data = 0b10101010;
+
+    // Setting the N:th bit (number 6)
+    // result = data -> bitwise OR -> bitmap
+    int result = data | (1 << 6);
+    printf("Result after setting bit 6 to 1: %d -> %d\n", data, result);
+
+
+    // Clearing the N:th bit (number 6)
+    // result = data -> bitwise AND -> bitmap (bitwise complement; invert)
+    result = data & ~(1 << 6);
+    printf("Result after clearing bit 6 (1 -> 0): %d -> %d\n", data, result);
+
+
+    // Selecting N bits (number 3 to 5 aka 3:5)
+    // result = data -> bitwise right shift 3 -> bitwise AND with a 0b111 bitmap (to get all 3 bits no matter what)
+    result = (data >> 3) & 0b111; // Shift the bits back 3 (result << 3) to get the actual value of the bits in their original place (40)
+    printf("Result after selecting the 3 to 5th bit: %d -> %d\n", data, result);
+}
+
 int main()
 {
     // calculator_int();
@@ -208,6 +231,7 @@ int main()
     // relational_operators();
     // logical_operators();
     // bitwise_operators();
+    bit_manipulation();
 
     return 0;
 }
