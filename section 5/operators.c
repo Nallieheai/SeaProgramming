@@ -222,6 +222,20 @@ void bit_manipulation()
     printf("Result after selecting the 3 to 5th bit: %d -> %d\n", data, result);
 }
 
+void sizeof_operator()
+{
+    // Returns the size of something in bytes (known during compile time)
+    // Result is an integer constant
+    // The operand can be a varaible, basic, derived data type (struct) or an expression.
+
+    printf("%llu\n", sizeof(int));
+    printf("%llu\n", sizeof(long int));
+    printf("%llu\n", sizeof(long long int));
+    printf("%llu\n", sizeof(char));
+    printf("%llu\n", sizeof(double));
+    printf("%llu\n", sizeof(float));
+}
+
 int main()
 {
     // calculator_int();
@@ -231,7 +245,8 @@ int main()
     // relational_operators();
     // logical_operators();
     // bitwise_operators();
-    bit_manipulation();
+    // bit_manipulation();
+    sizeof_operator();
 
     return 0;
 }
