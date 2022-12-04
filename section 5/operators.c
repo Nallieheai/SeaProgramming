@@ -264,6 +264,28 @@ void challenge_sphere()
     printf("The volume of a sphere with a radius of %f is: %.3f (%.3e)\n", radius, volume, volume);
 }
 
+void bit_selector() 
+{
+    // [0:3], [4:7], [8:11], [12:15]
+
+    unsigned int data = 0xABCD;
+    unsigned int start, end;
+    printf("Please enter the start index: ");
+    scanf("%u", &start);
+    printf("\n");
+    printf("Please enter the end index: ");
+    scanf("%u", &end);
+    printf("\n");
+
+    printf("Your indicies are: %d & %d\n", start, end);
+
+    unsigned int range = end - start + 1;
+    unsigned int bitmask = (1 << range ) - 1;
+    unsigned int result = (data >> start) & bitmask;
+
+    printf("Result: 0x%04X\n", result);
+}
+
 int main()
 {
     // calculator_int();
@@ -276,7 +298,8 @@ int main()
     // bit_manipulation();
     // sizeof_operator();
     // casting_and_conversions();
-    challenge_sphere();
+    // challenge_sphere();
+    bit_selector();
 
 
     return 0;
