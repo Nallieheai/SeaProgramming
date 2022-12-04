@@ -249,6 +249,21 @@ void casting_and_conversions()
     return;
 }
 
+void challenge_sphere()
+{
+    float radius;
+    printf("Insert the radius of the sphere: ");
+    scanf("%f", &radius);
+    printf("\n");
+
+    const float pi = 3.14159;
+    float area = 4 * pi * (radius * radius);
+    float volume = (4.0 / 3.0) * pi * (radius * radius * radius);
+
+    printf("The area of a sphere with a radius of %f is: %.2f (%.3e)\n", radius, area, area);
+    printf("The volume of a sphere with a radius of %f is: %.3f (%.3e)\n", radius, volume, volume);
+}
+
 int main()
 {
     // calculator_int();
@@ -260,7 +275,9 @@ int main()
     // bitwise_operators();
     // bit_manipulation();
     // sizeof_operator();
-    casting_and_conversions();
+    // casting_and_conversions();
+    challenge_sphere();
+
 
     return 0;
 }
