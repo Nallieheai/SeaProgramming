@@ -73,9 +73,46 @@ void planetary_alignment()
     if (lcm == -1) printf("Exceeded the maximum number of iterations!");
 }
 
+void using_goto()
+{
+    // __label__ cleanup;
+
+    // goto identifier;
+    // -> Immediately jump to identifier label
+    // -> unconditional jump (usually placed inside the body of an if-statement)
+
+    // Use cases: 
+    // -> Breaking out of nested loops (like a tripe break if there are 3 nested loops)
+    // -> alternative call nested loops in a function and then call return to exit ?
+
+    // some status...
+    // if (status == ERROR)
+        // goto cleanup;
+    // do something if error did not occur
+
+    // cleanup:
+    // clean up
+
+    // DO NOT USE GOTO AS A SUBSTITUTE FOR FUNCTION CALLS
+    // init:
+    //     if (1) goto procedure_1;
+    //     if (1) goto procedure_2;
+    
+    // procedure_0:
+    //     if (1) goto procedure_2;
+    
+    // procedure_1:
+    //     goto init;
+    
+    // procedure_2:
+    //     if (0) goto procedure_0;
+    return;
+}
+
 int main() 
 {
     // check_number();
-    planetary_alignment();
+    // planetary_alignment();
+    using_goto();
     return 0;
 }
