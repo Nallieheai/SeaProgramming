@@ -109,10 +109,76 @@ void using_goto()
     return;
 }
 
+void prime_numbers()
+{
+    // Prime number = Integer greater than 1 & only divisible by itself and 1
+    const int MAX = 1000;
+
+    int upperLimit;
+    printf("Enter the upper limit: ");
+    scanf("%d", &upperLimit);
+    if (upperLimit < 2 || upperLimit > MAX) {
+        printf("Error: must be 2 < limit < MAX\n");
+        goto clean_up;
+    }
+
+    printf("Prime numbers from 2 to %d\n", upperLimit);
+    for (int number = 2; number < upperLimit; number++)
+    {
+        bool isPrime = true;
+
+        for (int i = 2; i < number; i++)
+            if (number % i == 0) {
+                isPrime = false;
+                break;
+            } 
+        
+        if (isPrime) printf("%d\n", number);
+    }
+
+    // Find the first prime number above the lower limit
+    int lowerLimit;
+    printf("Enter the lower limit: ");
+    scanf("%d", &lowerLimit);
+    if (lowerLimit < 2 || lowerLimit > MAX) {
+        printf("Error: must be 2 < limit < MAX\n");
+        goto clean_up;
+    }
+
+    int firstPrimeNumber = -1;
+
+    for (int number = lowerLimit; number < MAX; number++)
+    {
+        bool isPrime = true;
+
+        for (int i = 2; i < number; i++)
+            if (number % i == 0) {
+                isPrime = false;
+                break;
+            } 
+        
+        if (isPrime) {
+            firstPrimeNumber = number;
+            break;
+        }
+    }
+
+    if (firstPrimeNumber == -1) {
+        printf("Cannot find prime numbers above %d\n", lowerLimit);
+    } else {
+        printf("The first  prime number above %d is %d\n", lowerLimit, firstPrimeNumber);
+    }
+    
+    clean_up:
+        printf("Cleaning up!\n");
+        return;
+}
+
 int main() 
 {
     // check_number();
     // planetary_alignment();
-    using_goto();
+    // using_goto();
+    prime_numbers();
     return 0;
 }
