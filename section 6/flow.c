@@ -169,9 +169,9 @@ void prime_numbers()
         printf("The first  prime number above %d is %d\n", lowerLimit, firstPrimeNumber);
     }
     
-    clean_up:
-        printf("Cleaning up!\n");
-        return;
+clean_up:
+    printf("Cleaning up!\n");
+    return;
 }
 
 int main() 
