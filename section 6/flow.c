@@ -25,7 +25,12 @@ void check_number()
 }
 
 void planetary_alignment()
-{
+{   
+    // Try it with real data:
+    // Earth (a): 365
+    // Venus (b): 225
+    // Mercury (c): 88
+    
     int a, b, c;
 
     printf("Enter the duration of orbit A in days: ");
