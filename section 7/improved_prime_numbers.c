@@ -73,9 +73,6 @@ int main()
     } else {
         printf("The first prime number above %d is: %d\n", lowerLimit, firstPrimeNumber);
     }
-    
-    
-    
 
     return EXIT_SUCCESS;
 }
