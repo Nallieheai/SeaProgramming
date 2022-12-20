@@ -8,3 +8,22 @@ Importance of debugging - Good Practices for Easy Debugging
 * Unit Testing: Test Driven Development
 * Use Printf wisely
 * Create log files
+
+Common Mistakes and Solutions
+
+* Syntax Errors (e.g. forgetting a semicolon)
+* Typos (e.g. using = instead of ==)
+* Logic Errors
+* Misunderstanding of C
+* Unexpected Conversions
+* Segmentation Fault
+* Memory Corruption
+* Poor Code Isolation
+
+Debugging Tools
+
+* Printf
+* Debuggers
+* Log files
+* Analyze Memory Dump and Call Stack
+* Static Analyzers
