@@ -1,0 +1,10 @@
+Importance of debugging - Good Practices for Easy Debugging
+
+* Using meaningful names
+* Good planning and clear documentation
+* Break the problem into smaller, isolated chunks (functions)
+* Keep it simple, and focus on what matters
+* Take it one step at a time, test every step!
+* Unit Testing: Test Driven Development
+* Use Printf wisely
+* Create log files
